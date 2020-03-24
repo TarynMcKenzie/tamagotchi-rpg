@@ -17,9 +17,10 @@ public class tamagotchi {
 
 //    TODO: Make it die
     public static void death (){
-        // if health = 0, death
-        // if health > =. life
-        // if age = 27, death
+        // switch statment:
+            // if health = 0, death
+            // if health > =. life
+            // if age = 27, death
     }
 
     public static void feedSnack (){
