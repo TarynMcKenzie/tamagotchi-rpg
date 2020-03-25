@@ -19,7 +19,19 @@ public class tamagotchi {
     static class WakeUpTama extends TimerTask {
         public WakeUpTama() {};
         public void run() {
-            System.out.println("Your tamagotchi has hatched! Yay! \nAs soon as tamagotchi hatches it will need immediate attention. \nThis is where your health meter comes in handy! \nYour health points (hp) will deteriorate every second until DEATH. \nTamagotchi will need to be fed. To feed: type 'feed snack' or 'feed meal' to +hp \nor 'no' to let your tamagotchi die.");
+            System.out.println("Your tamagotchi has hatched! Yay! \n" +
+                    "  .^._.^.\n" +
+                    "  | . . |\n" +
+                    " (  ---  )\n" +
+                    " .'     '.\n" +
+                    " |/     \\|\n" +
+                    "  \\ /-\\ /\n" +
+                    "   V   V \n" +
+"As soon as tamagotchi hatches it will need immediate attention." +
+" \nThis is where your health meter comes in handy! " +
+"\nYour health points (hp) will deteriorate every second until DEATH. " +
+"\nTamagotchi will need to be fed. To feed: type 'feed snack' or 'feed meal' to +hp " +
+"\nor 'no' to let your tamagotchi die.");
         }
     }
 
