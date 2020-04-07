@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class tamagotchi {
+public class tamagotchiOGForked {
 
     public static int healthPoints = 6;
     public static Timer timer = new Timer();
@@ -147,10 +147,10 @@ public class tamagotchi {
 //        if health
 
 
-        tamagotchi.WakeUpTama wakeup = new tamagotchi.WakeUpTama();
+        tamagotchiOGForked.WakeUpTama wakeup = new tamagotchiOGForked.WakeUpTama();
         timer.schedule(wakeup, 5000);
 
-        tamagotchi.DepleteHealth deplete = new tamagotchi.DepleteHealth();
+        tamagotchiOGForked.DepleteHealth deplete = new tamagotchiOGForked.DepleteHealth();
         timer.schedule(deplete, 5000, 5000);
     }
 }

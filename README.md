@@ -1,1 +1,1 @@
-# tamagotchi-rpg
+# tamagotchiOGForked-rpg
