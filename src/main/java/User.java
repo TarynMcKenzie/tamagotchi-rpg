@@ -25,4 +25,9 @@ public class User extends Thread {
         this.user = user;
     }
 
+    // ------------- Multithreading Methods -------------
+    public void run(){
+        System.out.println("thread two is running...");
+    }
+
 }

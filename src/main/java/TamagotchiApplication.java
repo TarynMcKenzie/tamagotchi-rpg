@@ -2,13 +2,9 @@
 
 import java.util.Scanner;
 
-public class TamagotchiApplication extends Thread{
+public class TamagotchiApplication{
 
     Scanner userAction = new Scanner(System.in);
-
-    public void run(){
-        System.out.println("thread is running...");
-    }
 
 
     public static void main(String[] args) {

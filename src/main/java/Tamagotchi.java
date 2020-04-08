@@ -1,4 +1,4 @@
-public class Tamagotchi implements TamagotchiHabits{
+public class Tamagotchi extends Thread implements TamagotchiHabits {
 
     // class that creates the tamagotchi objects while implementing the TamagotchiHabits interface
 
@@ -125,6 +125,8 @@ public class Tamagotchi implements TamagotchiHabits{
 
 
     // ------------- Multithreading Methods -------------
-    public void start() {
+    public void run(){
+        System.out.println("thread one is running...");
     }
+
 }
