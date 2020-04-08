@@ -4,6 +4,7 @@ public class Tamagotchi extends Thread {
 
     // =============== INITIALIZATION ===============
     protected String userDefinedName;
+
     // ------------- Non-changeable Stats -------------
     int age; // days from egg --> present state
     String gender; // male or female

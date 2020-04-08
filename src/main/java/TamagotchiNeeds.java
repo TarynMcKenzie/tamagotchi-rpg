@@ -1,6 +1,12 @@
-public abstract class TamagotchiNeeds implements TamagotchiHabits {
+public abstract class TamagotchiNeeds extends Tamagotchi implements TamagotchiHabits{
+
+    // =============== CONSTRUCTOR METHOD ===============
+    public TamagotchiNeeds(String tamagotchiName) {
+        super(tamagotchiName);
+    }
 
 
+    // =============== METHOD IMPLEMENTATION ===============
     // ------------- User Affected Stats -------------
     @Override
     public void bored() {

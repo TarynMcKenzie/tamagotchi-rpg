@@ -1,6 +1,12 @@
-public abstract class HealthMeter implements TamagotchiHabits {
+public abstract class HealthMeter extends Tamagotchi implements TamagotchiHabits {
+
+    // =============== CONSTRUCTOR METHOD ===============
+    public HealthMeter(String tamagotchiName) {
+        super(tamagotchiName);
+    }
 
 
+    // =============== METHOD IMPLEMENTATION ===============
     // ------------- Health Meters -------------
     @Override
     public void happy(){

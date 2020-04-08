@@ -1,6 +1,12 @@
-public abstract class LevelProgression implements TamagotchiHabits{
+public abstract class LevelProgression extends Tamagotchi implements TamagotchiHabits{
+
+    // =============== CONSTRUCTOR METHOD ===============
+    public LevelProgression(String tamagotchiName) {
+        super(tamagotchiName);
+    }
 
 
+    // =============== METHOD IMPLEMENTATION ===============
     // ------------- Level Progression -------------
     @Override
     public void incubation() {
