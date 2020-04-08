@@ -20,7 +20,7 @@ public class TamagotchiApplication extends Thread{
         usersTamagotchi.start();
 
         //---------- THREAD TWO ------------
-        User tamagotchiPlayer = new User();
+        User tamagotchiPlayer = new User("Steve");
         tamagotchiPlayer.start();
     }
 

@@ -9,12 +9,20 @@ public class User extends Thread {
 
 
     // =============== CONSTRUCTOR METHOD ===============
-   public void User(String userName){
+   public User(String userName){
 
        this.user = userName;
 
    }
 
+
     // =============== METHODS ===============
+    public String getUser() {
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
+    }
 
 }
