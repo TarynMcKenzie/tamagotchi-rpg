@@ -21,7 +21,7 @@ public class Tamagotchi implements TamagotchiHabits{
     // ------------- Level Progression -------------
     @Override
     public void incubation() {
-        // Goal: egg --> child
+        // Goal: egg --> baby
 
         // Will the user name their character at this point? Or after it hatches?
         // When will the egg hatch?
@@ -31,7 +31,7 @@ public class Tamagotchi implements TamagotchiHabits{
 
     @Override
     public void evolve() {
-        // Goal: child --> adult
+        // Goal: baby --> child --> adult
 
         // How many levels are there?
         // When will the tama achieve the next level? How?
@@ -123,4 +123,8 @@ public class Tamagotchi implements TamagotchiHabits{
         // At what point is sleep deprivation a health hazard?
     }
 
+
+    // ------------- Multithreading Methods -------------
+    public void start() {
+    }
 }

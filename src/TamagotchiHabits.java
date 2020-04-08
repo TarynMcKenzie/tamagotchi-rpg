@@ -5,14 +5,14 @@ public interface TamagotchiHabits {
      When a tamagotchi is created they will have an incubation period (egg status)
      Following the incubation period the egg will hatch. Out pops your brand new tamagotchi character chosen at random.
      Your tamagotchi will need to be played with, fed, use the bathroom, put to sleep.
-     If taken care of well, the tamagotchi will evolve to the next level (4 levels: egg, child, teen, adult)
+     If taken care of well, the tamagotchi will evolve to the next level (5 levels: egg, baby, child, teen, adult)
      */
 
 
     // ------------- Level Progression -------------
     void incubation(); // egg --> child
-    void evolve(); // child --> adult
-    void die(); // child --> die  or  adult --> die
+    void evolve(); // baby --> child --> adult
+    void die(); // baby --> die  or  child --> die  or  adult --> die
 
     // ------------- Non-changeable Stats -------------
     void age(); // days from egg --> present state
