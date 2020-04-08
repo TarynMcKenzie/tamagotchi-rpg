@@ -15,8 +15,8 @@ This emulator is based on the original Tamagotchi application.
 
 Navigate to the src/ and compile, run.
     
-    $ javac Tamagotchi.java
-    $ java Tamagotchi
+    $ javac TamagotchiApplication.java
+    $ java TamagotchiApplication
     
 Note: This emulator was created under Java 11
 
