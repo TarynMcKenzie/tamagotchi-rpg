@@ -14,10 +14,6 @@ public interface TamagotchiHabits {
     void evolve(); // baby --> child --> adult
     void die(); // baby --> die  or  child --> die  or  adult --> die
 
-    // ------------- Non-changeable Stats -------------
-    void age(); // days from egg --> present state
-    void gender(); // male or female
-
     // ------------- Health Meters -------------
     void happy(); // heart health points (max = 4 hearts)
     void hungry(); // hunger health points (max = 4 hearts)
