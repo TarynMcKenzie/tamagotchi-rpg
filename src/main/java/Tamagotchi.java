@@ -1,3 +1,6 @@
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class Tamagotchi extends Thread {
 
     // class that creates the tamagotchi objects while implementing the TamagotchiHabits interface
@@ -9,12 +12,31 @@ public class Tamagotchi extends Thread {
     int age; // days from egg --> present state
     String gender; // male or female
 
+    Timer timer;
 
     // =============== CONSTRUCTOR METHOD ===============
-    public Tamagotchi(String tamagotchiName){
+    public Tamagotchi(String tamagotchiName) {
 
         // How the tamagotchi will be constructed
         this.userDefinedName = tamagotchiName;
+
+        timer = new Timer(); //when a new tamagotchi is created, set instantiate a new Timer
+        timer.schedule(new newTamagotchiHatch(), 0);
+//                5000,        //initial delay
+//                1*5000);  //subsequent rate
+
+    }
+
+    class newTamagotchiHatch extends TimerTask {
+
+        public void run() { // begin the TimerTask
+            for (int i = 0; i < 10; i++) {
+//                Thread.sleep(1000);
+                System.out.println(i); // print the message after the designated delay (set above in the constructor method)
+                timer.cancel(); //Terminate the timer thread
+            }
+
+        }
 
     }
 
@@ -47,7 +69,7 @@ public class Tamagotchi extends Thread {
     }
 
     // ------------- Multithreading Methods -------------
-    public void run(){
+    public void run() {
         System.out.println("thread one is running...");
     }
 

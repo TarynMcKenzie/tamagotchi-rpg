@@ -28,6 +28,10 @@ public class User extends Thread {
     // ------------- Multithreading Methods -------------
     public void run(){
         System.out.println("thread two is running...");
+        for (int i = 0; i < 10; i++) {
+//                Thread.sleep(1000);
+            System.out.println(i); // print the message after the designated delay (set above in the constructor method)
+        }
     }
 
 }
