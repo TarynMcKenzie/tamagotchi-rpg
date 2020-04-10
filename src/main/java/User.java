@@ -31,6 +31,9 @@ public class User extends Thread {
         for (int i = 0; i < 10; i++) {
 //                Thread.sleep(1000);
             System.out.println(i); // print the message after the designated delay (set above in the constructor method)
+
+            // Note: In the case of printing numbers to System.out, all of the threads are trying to contest for access to the same resource System.out which is a synchronized PrintStream.
+            // This means that most of the time is wasted waiting for another thread to release the lock on System.out.
         }
     }
 
