@@ -9,11 +9,11 @@ public class User extends Thread {
 
 
     // =============== CONSTRUCTOR METHOD ===============
-   public User(String userName){
+    public User(String userName) {
 
-       this.user = userName;
+        this.user = userName;
 
-   }
+    }
 
 
     // =============== METHODS ===============
@@ -26,15 +26,12 @@ public class User extends Thread {
     }
 
     // ------------- Multithreading Methods -------------
-    public void run(){
-        System.out.println("thread two is running...");
-        for (int i = 0; i < 10; i++) {
-//                Thread.sleep(1000);
-            System.out.println(i); // print the message after the designated delay (set above in the constructor method)
+    public void run() {
 
-            // Note: In the case of printing numbers to System.out, all of the threads are trying to contest for access to the same resource System.out which is a synchronized PrintStream.
-            // This means that most of the time is wasted waiting for another thread to release the lock on System.out.
-        }
+        System.out.println("thread one is running...");
+
+        // Note: In the case of printing numbers to System.out, all of the threads are trying to contest for access to the same resource System.out which is a synchronized PrintStream.
+        // This means that most of the time is wasted waiting for another thread to release the lock on System.out.
     }
 
 }

@@ -1,5 +1,5 @@
+import java.util.Random;
 import java.util.Timer;
-import java.util.TimerTask;
 
 public class Tamagotchi extends Thread {
 
@@ -7,12 +7,12 @@ public class Tamagotchi extends Thread {
 
     // =============== INITIALIZATION ===============
     protected String userDefinedName;
+    public static double healthPoints = 4;
 
     // ------------- Non-changeable Stats -------------
-    int age; // days from egg --> present state
+    int age = 0; // days from egg --> present state
     String gender; // male or female
 
-    Timer timer;
 
     // =============== CONSTRUCTOR METHOD ===============
     public Tamagotchi(String tamagotchiName) {
@@ -20,28 +20,30 @@ public class Tamagotchi extends Thread {
         // How the tamagotchi will be constructed
         this.userDefinedName = tamagotchiName;
 
-        timer = new Timer(); //when a new tamagotchi is created, set instantiate a new Timer
-        timer.schedule(new newTamagotchiHatch(), 0);
-//                5000,        //initial delay
-//                1*5000);  //subsequent rate
-
-    }
-
-    class newTamagotchiHatch extends TimerTask {
-
-        public void run() { // begin the TimerTask
-            for (int i = 0; i < 10; i++) {
-//                Thread.sleep(1000);
-                System.out.println(i); // print the message after the designated delay (set above in the constructor method)
-                timer.cancel(); //Terminate the timer thread
-            }
-
-        }
-
+        HealthTimer beginTimer = new HealthTimer();
+        beginTimer.run();
     }
 
 
     // =============== METHOD IMPLEMENTATION ===============
+
+    public static double getHealthPoints() {
+        System.out.println(healthPoints);
+        return healthPoints;
+    }
+
+    public static void setHealthPoints(double changeValue) {
+        healthPoints += changeValue;
+    }
+
+    public String getUserDefinedName() {
+        return userDefinedName;
+    }
+
+    public void setUserDefinedName(String userDefinedName) {
+        this.userDefinedName = userDefinedName;
+    }
+
     // ------------- Non-changeable Stats -------------
 
     public int getAge() {
@@ -59,18 +61,29 @@ public class Tamagotchi extends Thread {
         return gender;
     }
 
-    public void setGender(String gender) {
+    public void setGender() {
         // Goal:  male or female
 
-        // How will the gender be determined?
-        // Can the user choose the gender?
-        this.gender = gender;
+        // How will the gender be determined? via Random()
+        // Can the user choose the gender? no
+
+        if(new Random().nextBoolean()) {
+            this.gender = "male";
+        } else {
+            this.gender = "female";
+        }
 
     }
 
     // ------------- Multithreading Methods -------------
     public void run() {
-        System.out.println("thread one is running...");
+        System.out.println("thread two is running...");
+
+        Timer timer = new Timer(); //when a new tamagotchi is created, set instantiate a new Timer
+        timer.schedule(new HealthTimer(), 5000, 5000); // Timer is schedule to run at a 5 (5000 millisecond) second interval
+
+        // Note: In the case of printing numbers to System.out, all of the threads are trying to contest for access to the same resource System.out which is a synchronized PrintStream.
+        // This means that most of the time is wasted waiting for another thread to release the lock on System.out.
     }
 
 }

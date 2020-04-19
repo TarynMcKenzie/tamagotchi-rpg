@@ -1,5 +1,7 @@
 public abstract class HealthMeter extends Tamagotchi implements TamagotchiHabits {
 
+
+
     // =============== CONSTRUCTOR METHOD ===============
     public HealthMeter(String tamagotchiName) {
         super(tamagotchiName);
@@ -14,6 +16,7 @@ public abstract class HealthMeter extends Tamagotchi implements TamagotchiHabits
 
         // What will determines the tama happiness?
         // How fast will their happiness deplete?
+
     }
 
     @Override
