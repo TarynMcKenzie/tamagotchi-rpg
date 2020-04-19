@@ -32,3 +32,5 @@ build/
 
 ### properties file ###
 src/main/resources/application.properties
+
+codemr/

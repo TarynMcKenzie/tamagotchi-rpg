@@ -18,7 +18,7 @@ public class TamagotchiApplication {
                 "| || (_| | | | | | | (_| | (_| | (_) | || (__| | | | |\n" +
                 " \\__\\__,_|_| |_| |_|\\__,_|\\__, |\\___/ \\__\\___|_| |_|_|\n" +
                 "                           __/ |                      \n" +
-                "                          |___/                       ");
+                "                          |___/                       \n");
 
 
         System.out.print("What is your player name?");
