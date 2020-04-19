@@ -20,6 +20,8 @@ public class Tamagotchi extends Thread {
         // How the tamagotchi will be constructed
         this.userDefinedName = tamagotchiName;
 
+        setGender();
+
         HealthTimer beginTimer = new HealthTimer();
         beginTimer.run();
     }
@@ -77,7 +79,7 @@ public class Tamagotchi extends Thread {
 
     // ------------- Multithreading Methods -------------
     public void run() {
-        System.out.println("thread two is running...");
+        System.out.print("\nthread two is running...\n");
 
         Timer timer = new Timer(); //when a new tamagotchi is created, set instantiate a new Timer
         timer.schedule(new HealthTimer(), 5000, 5000); // Timer is schedule to run at a 5 (5000 millisecond) second interval

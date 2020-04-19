@@ -10,9 +10,7 @@ public class HealthTimer extends TimerTask {
 
 
         // Run a timer test
-        for (int i = 0; i < 10; i++) {
-            System.out.println(i); // print the message after the designated delay (set above in the constructor method)
-        }
+        System.out.println("Begin 5 second interval Schedule for TimerTask");
 
     }
 

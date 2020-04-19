@@ -21,28 +21,29 @@ public class TamagotchiApplication {
                 "                          |___/                       \n");
 
 
-        System.out.print("What is your player name?");
+        System.out.print("What is your player name? ");
         String playerName = input.nextLine();
 
         //---------- THREAD ONE ------------
         User tamagotchiPlayer = new User(playerName);
         tamagotchiPlayer.setUser(playerName);
 
-        System.out.println("Welcome," + Tamagotchi.getUserDefinedName() + " here is your tamagotchi egg.");
-
-        System.out.println("You are going to have a " + Tamagotchi.getGender() + " tamagotchi");
-        System.out.println("Your new tamagotchi will hatch soon. Be patient.");
+        System.out.println("\nWelcome, " + tamagotchiPlayer.getUser() + ". Here is your tamagotchi egg!\n\n" +
+                "Get ready for your baby Tamagotchi to hatch. \n" +
+                "When it does hatch, it will be hungry and won't be too happy so it will need some taking care of. \n\n"
+        );
 
         tamagotchiPlayer.start();// Start new thread, which is defined by the run() in the User Class
 
 
-
         //---------- THREAD TWO ------------
-        System.out.print("While you wait for it to hatch, give your Tamagotchi a name:");
+        System.out.print("Give your Tamagotchi a name: ");
         String tamagotchiName = input.nextLine();
 
         Tamagotchi usersTamagotchi = new Tamagotchi(tamagotchiName);
         usersTamagotchi.setUserDefinedName(tamagotchiName);
+
+        System.out.println("Suprise! " + usersTamagotchi.getUserDefinedName() + " is going to be a " + usersTamagotchi.getGender() + " tamagotchi. " + usersTamagotchi.getUserDefinedName() + " will hatch soon. Be patient.");
 
         usersTamagotchi.start(); // Start new thread, which is defined by the run() in the Tamagotchi Class
 
